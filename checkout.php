@@ -70,4 +70,3 @@ foreach ($_SESSION['cart'] as $product) {
 
 <!-- Incluindo o rodapé (footer) -->
 <?php include('layouts/footer.php'); ?>
-
