@@ -1,4 +1,4 @@
-
+/* Estilos para a Navbar */
 .navbar-back {
     background-color: #000;
 }
@@ -30,7 +30,7 @@
     gap: 20px;
 }
 
-
+/* Home Section */
 #home {
     background-image: url('../imgs/Banner.png');
     width: 100%;
@@ -59,6 +59,7 @@
     margin-bottom: 20px;
 }
 
+/* Footer */
 .footer-custom {
     background: #111;
     color: white;
@@ -88,7 +89,6 @@
 }
 
 @media (max-width: 768px) {
-
     #home {
         padding-left: 20px;
         text-align: center;
@@ -115,9 +115,165 @@
         height: 45px;
     }
 }
+
 .footer-custom .col-12.col-md-3:first-child {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+/* Ajuste para a div do produto */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* Garantir que o botão fique no final */
+    height: 450px;  /* Definir uma altura fixa para as divs dos produtos */
+    overflow: hidden;  /* Evitar que o conteúdo ultrapasse */
+}
+
+/* Imagem do produto */
+.product-card img {
+    height: 250px;  /* Tamanho fixo para as imagens */
+    width: 100%;  /* Garantir que a imagem ocupe toda a largura da div */
+    object-fit: cover;  /* Manter a proporção da imagem sem distorção */
+}
+
+/* Nome e preço do produto */
+.product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.product-price {
+    font-size: 1rem;
+    color: #007bff;  /* Azul claro para o preço */
+    margin-top: auto;  /* Garantir que o preço fique na parte inferior */
+}
+
+/* Ajuste no botão "Ver Detalhes" */
+.product-card a {
+    margin-top: auto;  /* Forçar o botão para a parte inferior da div */
+    display: block;
+    margin-bottom: 10px;  /* Espaçamento do botão para a borda da div */
+}
+
+/* Se você quiser um hover nos cards */
+.product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Ajustando a altura da div e espaçamento entre as divs */
+.product-card {
+    height: 100%; /* Garantir que todas as divs de produtos tenham o mesmo tamanho */
+    margin-bottom: 30px; /* Adiciona espaço abaixo de cada produto */
+}
+
+/* Ajustando o espaçamento da paginação */
+.pagination {
+    margin-top: 30px; /* Adiciona espaço acima da paginação */
+    margin-bottom: 30px; /* Adiciona espaço abaixo da paginação */
+}
+
+/* Garantir que a div de conteúdo tenha espaço no final */
+.container {
+    margin-bottom: 100px; /* Adiciona um espaço extra para a parte inferior */
+}
+
+/* Estilização das imagens em miniatura */
+img.img-thumbnail {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+img.img-thumbnail:hover {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+}
+
+/* Estilização do botão */
+button.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 1.2rem;
+}
+
+button.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Melhorando o layout */
+.main-image img {
+    border-radius: 10px;
+}
+
+/* Ajustes nas colunas */
+.row {
+    margin-top: 50px;
+}
+/* Estilizando a div de descrição e valor */
+.product-details {
+    background-color: #f0f8ff; /* Azul suave para o fundo */
+    padding: 20px;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-top: 20px;
+    border: 1px solid #00bfff; /* Bordas em azul claro */
+}
+
+/* Título da seção */
+.product-details h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333; /* Cor escura para o título */
+    margin-bottom: 15px;
+}
+
+/* Estilizando a descrição do produto */
+.product-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Estilizando o preço */
+.product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff; /* Azul mais forte para o preço */
+    margin-bottom: 20px;
+}
+
+/* Botão "Adicionar ao Carrinho" */
+button.btn-danger {
+    background-color: #007bff; /* Azul para o botão */
+    border-color: #007bff;
+    font-size: 1.2rem;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    color: #fff;
+}
+
+button.btn-danger:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+    cursor: pointer;
+}
+
+/* Ajustes para o layout responsivo */
+@media (max-width: 768px) {
+    .product-details {
+        padding: 15px;
+    }
+
+    .product-details h3 {
+        font-size: 1.8rem;
+    }
+
+    .product-price {
+        font-size: 1.2rem;
+    }
 }
