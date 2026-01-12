@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -25,7 +27,7 @@
     <img src="assets/imgs/STORE.png" width="100px" alt="Logo da loja" class="navbar-logo" />
 
     <!-- Nome da loja -->
-    <a class="navbar-brand navbar-font ms-2" href="index.php">GenovaSetups</a> <!-- Link para a página inicial -->
+    <a class="navbar-brand navbar-font ms-2" href="index.php">GenovaSetups</a>
 
     <!-- Botão para menu responsivo (aparece em telas menores) -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -40,7 +42,7 @@
           <a class="nav-link active navbar-menu" href="index.php">Home</a>  
         </li>
         <li class="nav-item">
-          <a class="nav-link navbar-menu" href="products.php">Produtos</a>  <!-- Link para a página de produtos -->
+          <a class="nav-link navbar-menu" href="products.php">Produtos</a>  
         </li>
         <li class="nav-item">
           <a class="nav-link navbar-menu" href="#">Blog</a> 
@@ -52,12 +54,18 @@
 
       <!-- Ícones de Carrinho e Login -->
       <div class="d-flex align-items-center gap-3 navbar-icon ms-3">
-        <!-- Carrinho de Compras -->
-        <i class="fa fa-shopping-cart" style="font-size: 1.5rem;"></i>
+        <!-- Carrinho de Compras com a quantidade -->
+        <a href="cart.php">
+          <i class="fas fa-shopping-bag" style="font-size: 1.5rem;">
+            <?php if(isset($_SESSION['quantity']) && $_SESSION['quantity'] != 0) { ?>
+              <span class="cart-quantity"><?= $_SESSION['quantity']; ?></span>
+            <?php } ?>
+          </i>
+        </a>
         
         <!-- Login Link -->
         <a href="login.php">
-          <i class="fa fa-user" style="font-size: 1.5rem;"></i>  <!-- Link para a página de login -->
+          <i class="fa fa-user" style="font-size: 1.5rem;"></i>  
         </a>
       </div>
 

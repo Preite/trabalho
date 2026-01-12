@@ -61,9 +61,9 @@ $product = mysqli_fetch_assoc($result);
                 <p class="product-description"><?= nl2br(htmlspecialchars($product['product_description'])) ?></p>
                 <p class="product-price">R$ <?= number_format($product['product_price'], 2, ',', '.') ?></p>
 
-                <!-- Formulário para adicionar ao carrinho -->
-                <form action="add_to_cart.php" method="POST">
-                    <input type="hidden" name="product_id" value="<?= $product['product_id'] ?>">
+                <!-- Formulário para adicionar ao carrinho (alterado para enviar para cart.php) -->
+                <form action="cart.php" method="GET">
+                    <input type="hidden" name="add_to_cart" value="<?= $product['product_id'] ?>">
                     <div class="mb-3">
                         <label for="quantity" class="form-label">Quantidade</label>
                         <input type="number" id="quantity" name="quantity" class="form-control" min="1" value="1" required>

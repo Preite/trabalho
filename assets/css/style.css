@@ -381,3 +381,11 @@ button.btn-primary:hover {
         margin: 20px auto;
     }
 }
+.cart-quantity {
+    position: absolute;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 0.9rem;
+}
