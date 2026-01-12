@@ -127,16 +127,19 @@
 .product-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;  /* Garantir que o botão fique no final */
-    height: 450px;  /* Definir uma altura fixa para as divs dos produtos */
-    overflow: hidden;  /* Evitar que o conteúdo ultrapasse */
+    justify-content: space-between;
+    height: 450px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra leve */
+    border-radius: 8px; /* Bordas arredondadas para a div do produto */
 }
 
 /* Imagem do produto */
 .product-card img {
-    height: 250px;  /* Tamanho fixo para as imagens */
-    width: 100%;  /* Garantir que a imagem ocupe toda a largura da div */
-    object-fit: cover;  /* Manter a proporção da imagem sem distorção */
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px; /* Borda arredondada nas imagens */
 }
 
 /* Nome e preço do produto */
@@ -147,39 +150,33 @@
 
 .product-price {
     font-size: 1rem;
-    color: #007bff;  /* Azul claro para o preço */
-    margin-top: auto;  /* Garantir que o preço fique na parte inferior */
+    color: #007bff;
+    margin-top: auto;
 }
 
 /* Ajuste no botão "Ver Detalhes" */
 .product-card a {
-    margin-top: auto;  /* Forçar o botão para a parte inferior da div */
+    margin-top: auto;
     display: block;
-    margin-bottom: 10px;  /* Espaçamento do botão para a borda da div */
+    margin-bottom: 10px;
 }
 
-/* Se você quiser um hover nos cards */
+/* Hover nos cards */
 .product-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
     transition: all 0.3s ease;
 }
 
-/* Ajustando a altura da div e espaçamento entre as divs */
-.product-card {
-    height: 100%; /* Garantir que todas as divs de produtos tenham o mesmo tamanho */
-    margin-bottom: 30px; /* Adiciona espaço abaixo de cada produto */
-}
-
 /* Ajustando o espaçamento da paginação */
 .pagination {
-    margin-top: 30px; /* Adiciona espaço acima da paginação */
-    margin-bottom: 30px; /* Adiciona espaço abaixo da paginação */
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 /* Garantir que a div de conteúdo tenha espaço no final */
 .container {
-    margin-bottom: 100px; /* Adiciona um espaço extra para a parte inferior */
+    margin-bottom: 100px;
 }
 
 /* Estilização das imagens em miniatura */
@@ -213,21 +210,22 @@ button.btn-primary:hover {
 .row {
     margin-top: 50px;
 }
-/* Estilizando a div de descrição e valor */
+
+/* Estilos para a div de descrição e valor */
 .product-details {
     background-color: #f0f8ff; /* Azul suave para o fundo */
     padding: 20px;
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-    border: 1px solid #00bfff; /* Bordas em azul claro */
+    border: 1px solid #00bfff;
 }
 
 /* Título da seção */
 .product-details h3 {
     font-size: 2rem;
     font-weight: bold;
-    color: #333; /* Cor escura para o título */
+    color: #333;
     margin-bottom: 15px;
 }
 
@@ -242,13 +240,13 @@ button.btn-primary:hover {
 .product-price {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #007bff; /* Azul mais forte para o preço */
+    color: #007bff;
     margin-bottom: 20px;
 }
 
 /* Botão "Adicionar ao Carrinho" */
 button.btn-danger {
-    background-color: #007bff; /* Azul para o botão */
+    background-color: #007bff;
     border-color: #007bff;
     font-size: 1.2rem;
     padding: 12px;
@@ -275,5 +273,111 @@ button.btn-danger:hover {
 
     .product-price {
         font-size: 1.2rem;
+    }
+}
+
+/* Estilos para o formulário de login */
+.card {
+    max-width: 500px;
+    margin-top: 50px;
+}
+
+.card-header {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+button.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 1.2rem;
+}
+
+button.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+    cursor: pointer;
+}
+
+.alert-danger {
+    font-weight: bold;
+}
+
+.text-center a {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}
+/* Estilo para o formulário de login */
+.card {
+    max-width: 500px;
+    margin: 50px auto; /* Margem automática para centralizar a div */
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas para o formulário */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do formulário */
+}
+
+/* Cabeçalho do formulário */
+.card-header {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 15px;
+    border-radius: 10px 10px 0 0; /* Bordas arredondadas no topo */
+}
+
+/* Estilo dos campos de entrada */
+.form-control {
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Botão de submit */
+button.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 1.2rem;
+    padding: 12px;
+    border-radius: 5px;
+    width: 100%; /* Preenche toda a largura */
+}
+
+button.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+    cursor: pointer;
+}
+
+/* Alinhamento da mensagem de erro */
+.alert-danger {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo do link "Cadastre-se aqui" */
+.text-center a {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}
+
+/* Ajuste responsivo para telas menores */
+@media (max-width: 768px) {
+    .card {
+        width: 90%; /* Garantir que o formulário ocupe 90% da largura na tela menor */
+        margin: 20px auto;
     }
 }
